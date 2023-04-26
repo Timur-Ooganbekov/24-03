@@ -18,7 +18,7 @@ const convert = (element, target, target2) => {
                 target2.value = (element.value * response.usd / response.eur).toFixed(2)
             } else if (element===eur){
                 target.value = (element.value / response.eur).toFixed(2)
-                target2.value = (element.value / response.eur / response.usd).toFixed(2)
+                target2.value = (element.value * response.eur / response.usd).toFixed(2)
             }
 
             element.value === '' && (target.value = '')
